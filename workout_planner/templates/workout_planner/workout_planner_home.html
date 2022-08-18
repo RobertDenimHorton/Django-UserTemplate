@@ -1,0 +1,19 @@
+{% extends "users/base.html" %}
+{% block title %}workout Page{% endblock title %}
+{% block content %}
+<div>
+    <p1>
+        Add work outs!
+    </p1>
+    <div>
+        <form method="POST">
+            {% csrf_token %}   
+            <label class="small mb-1">Plan Name:</label>
+                {{planner_form}}   
+            <label class="small mb-1">Add Workout:</label>
+                {{workout_form}}                  
+            <button type="submit">Add Workout</button>
+        </form >
+    </div>
+</div>
+{% endblock content %}
